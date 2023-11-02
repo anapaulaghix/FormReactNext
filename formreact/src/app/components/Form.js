@@ -6,7 +6,7 @@ import Cadastrado from "./Cadastrado";
 
 const Form = () => {
     const [page, setPage] = useState(0)
-    const formTitles = ["Insira seus dados"]
+    const formTitle = ["Insira seus dados"]
     const [complete, setComplete] = useState(false)
 
     const pageDisplay = () =>{
@@ -21,15 +21,15 @@ const Form = () => {
     return(
       <div className='flex flex-col gap-4 self-center'>
 
-        <h1>{formTitles[page ]}</h1>
+        <h1>{formTitle[page ]}</h1>
         <div>{pageDisplay()}</div>
 
-       <button className="bg-red-600 rounded-md pt-6 items-center"
+       <button className="bg-red-600 rounded-md pt-3 items-center hover:bg-red-400 py-3 px-5"
        onClick={() => {
-        page === formTitles.length ? setComplete(true) :
+        page === formTitle.length ? setComplete(true) :
         setPage((currPage) =>  currPage + 1)}}
        >  
-       {page === formTitles.length ? "Enviar" : "Proximo"}
+       {page === formTitle.length ? "Enviar" : "Proximo"}
        </button>
         
         { complete && (<Cadastrado/>)}
