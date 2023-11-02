@@ -1,7 +1,9 @@
+import Text from './components/Text'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between p-10">
-      <h1>Test</h1>
+    <main className="flex min-h-screen flex-col-2 justify-between p-20 container">
+      <Text />
     </main>
   )
 }
