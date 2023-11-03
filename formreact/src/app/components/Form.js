@@ -17,12 +17,15 @@ const Form = () => {
             return <Form2 />
         }
     }
-
+    
     return(
       <div className='flex flex-col gap-4 self-center'>
-
-        <h1>{formTitle[page ]}</h1>
-        <div>{pageDisplay()}</div>
+       {complete ? (
+                <Cadastrado />
+            ) : (
+                <section className='flex flex-col gap-4 self-center'>
+         <h1>{formTitle[page ]}</h1>
+         <div>{pageDisplay()}</div>
 
        <button className="bg-red-600 rounded-md pt-3 items-center hover:bg-red-400 py-3 px-5"
        onClick={() => {
@@ -31,8 +34,9 @@ const Form = () => {
        >  
        {page === formTitle.length ? "Enviar" : "Proximo"}
        </button>
+       </section>
         
-        { complete && (<Cadastrado/>)}
+        )}
        </div>
     )
 }
