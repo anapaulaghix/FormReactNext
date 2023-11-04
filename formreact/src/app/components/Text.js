@@ -4,6 +4,7 @@ import Form from './Form'
 import Link from 'next/link'
 
 const Text = () => {
+
     return(
       <section className='grid md:grid-cols-2 md:my-2 py-3 gap-3 items-center'>
         <div className=''>

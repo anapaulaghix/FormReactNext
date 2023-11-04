@@ -8,14 +8,19 @@ const Form = () => {
     const [page, setPage] = useState(0)
     const formTitle = ["Insira seus dados"]
     const [complete, setComplete] = useState(false)
+    const [formData, setFormData] = useState({ nome: "", telefone: "", tatoo: "" });
 
     const pageDisplay = () =>{
         if(page === 0){
-            return <Form1 />
+            return <Form1 onFormDataChange={handleFormDataChange} page={page}/>
         }
         if(page === 1){
-            return <Form2 />
+            return <Form2 onFormDataChange={handleFormDataChange} page={page}/>
         }
+    }
+
+    const handleFormDataChange = (data) => {
+        setFormData({ ...formData, ...data });
     }
     
     return(
