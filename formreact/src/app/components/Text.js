@@ -1,10 +1,11 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
-import Form from './Form'
+import Form from '../Form/page'
 import Link from 'next/link'
 
 const Text = () => {
-
+    
     return(
       <section className='grid md:grid-cols-2 md:my-2 py-3 gap-3 items-center'>
         <div className=''>
@@ -25,18 +26,16 @@ const Text = () => {
           <p></p>
           </div>
         </section>
-
+         
         <Link href="/Form">
-        <button className="lg:hidden bg-blue-500 text-white p-2 rounded">
-        Botão para dispositivos móveis
-        </button>
-        </Link>
+          <button className="lg:hidden bg-red-600 rounded-md pt-3 hover:bg-red-400 py-3 px-10 self-center">Cadastre-se </button>
+          </Link>
        </div>
       
-      <div className='columns-5xl'>
+      <div className="w-50 max-sm:hidden">
        <Form/>
       </div>
-
+      
     </section>
     )
 }

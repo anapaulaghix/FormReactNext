@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
-import Form1 from './Form1'
-import Form2 from "./Form2";
-import Cadastrado from "./Cadastrado";
+import Form1 from '../components/Form1'
+import Form2 from "../components/Form2";
+import Cadastrado from "../components/Cadastrado";
 
 const Form = () => {
     const [page, setPage] = useState(0)

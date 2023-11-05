@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Cadastrado(){
     return (
@@ -12,6 +13,9 @@ export default function Cadastrado(){
           width={300}
           height={300}
           />
+
+        <Link href="/Form3">Ir p form3</Link>
         </div>
+
     )
 }
