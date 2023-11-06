@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import Agendado from '../Agendado/page'
 
 export default function Form3(){
    return(
-      <div>
-         <section>
+      <div className=''>
+         <section className=''>
          <Image 
           src="/images/Logo.png"
           alt="teste"
@@ -14,19 +16,21 @@ export default function Form3(){
             <input type="date"></input>
          </section>
 
-         <section>
+         <section className=''>
             <label>Escolha o melhor horário disponível para você</label>
-            <button>09:00</button>
-            <button>10:00</button>
-            <button>11:00</button>
-            <button>14:00</button>
-            <button>15:00</button>
+            <button className=''>09:00</button>
+            <button className=''>10:00</button>
+            <button className=''>11:00</button>
+            <button className=''>14:00</button>
+            <button className=''>15:00</button>
 
             <input type='checkbox'  />
             <label>Nós podemos te manter informado sobre a data do seu agendamento via SMS?</label>
          </section>
-
-         <button>Agendar</button>
+          
+         <Link href="/Agendado">
+          <button className=''>Agendar</button>
+         </Link>
       </div>
    )
 }

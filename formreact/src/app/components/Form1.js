@@ -20,15 +20,17 @@ export default function Form1({ onFormDataChange, page }){
     return(
         <div className="">
         <label htmlFor='name' className="">Qual seu nome completo?</label>
-        <input className="bg-slate-500 rounded-md border border-[#a5a7b3] h-8" type="text" placeholder="  Insira seu nome" name="nome"
+        <input className="bg-[#6E6E6E33] rounded-md border border-[#8A8A8A] h-8" type="text" placeholder="  Insira seu nome" name="nome"
         value={nome}
         onChange={handleNomeChange}
         ></input>
 
         <label htmlFor='name'>Qual seu telefone completo?</label>
-        <input className="bg-slate-500 rounded-md border border-[#a5a7b3] h-8" type="tel" placeholder="  Insira seu telefone" name="telefone"
-                value={telefone}
-                onChange={handleTelefoneChange}></input>
+        <input className="bg-[#6E6E6E33] rounded-md border border-[#8A8A8A] h-8" type="tel" placeholder="  Insira seu telefone" name="telefone"
+        value={telefone}
+        onChange={handleTelefoneChange}
+        >
+       </input>
         </div>
     )
 }
