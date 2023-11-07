@@ -25,7 +25,7 @@ export default function Cadastrado({ formData }){
         <p>Em breve, você receberá um SMS no número <span>{formData.telefone}</span> com a confirmação e um link para
         você escolheras datas que melhor se encaixam na sua agenda.</p>
 
-        <div className='hidden xl:block'>
+        <div className='hidden xl:block align-center'>
         <Image 
           src="/images/Mensagem.png"
           alt="teste"
@@ -34,7 +34,7 @@ export default function Cadastrado({ formData }){
           />
         </div>
 
-        <Link href="/Form3">Ir p form3</Link>
+        <Link href="/Form3">Agendamento</Link>
         </div>
 
     )

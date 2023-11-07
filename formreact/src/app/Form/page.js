@@ -55,12 +55,12 @@ export default function Form(){
     }
     
     return (
-      <div className='flex flex-col gap-4 self-center'>
+      <div className='flex flex-col gap-4 flex-end h-1/2'>
        {complete ? (
                 <Cadastrado formData={formData}/>
             ) : (
 
-        <section className='flex flex-col gap-4 self-center'>
+        <section className='flex flex-col gap-4 flex-end h-1/2'>
         <div className="block xl:hidden align-center">
         <Image 
           src="/images/Logo.png"
