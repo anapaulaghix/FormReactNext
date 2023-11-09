@@ -25,7 +25,7 @@ const time = ['08:00','09:00','10:00','14:00','15:00']
           )
        })}
       <div>
-        {info ? `Your appointment is set to ${event} ${props.date.toDateString()}` : null}
+        {info ? `Agendamento: ${event} ${props.date.toDateString()}` : null}
       </div>
    </div>
     )
