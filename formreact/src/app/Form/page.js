@@ -10,14 +10,15 @@ export default function Form(){
     const [page, setPage] = useState(0)
     const formTitle = ["Insira seus dados"]
     const [complete, setComplete] = useState(false)
-    const [formData, setFormData] = useState({ nome: "", telefone: "", tatoo: "" });
+    const [formData, setFormData] = useState({ nome: "", telefone: ""});
     const totalSteps = 2
-    const [formSubmitted, setFormSubmitted] = useState(false);
 
     const handleButtonClick = async (e) => {
         page === formTitle.length ? setComplete(true) : setPage((currPage) => currPage + 1);
 
         e.preventDefault();
+        console.log(formData)
+        
         if (formData.nome && formData.telefone ) {
             try {
                 const response = await fetch('/api/inserirdados', {
@@ -37,7 +38,6 @@ export default function Form(){
             } catch (error) {
                 console.error("Erro ao enviar os dados:", error);
             }
-            setFormSubmitted(true);
         }
       };
 
@@ -55,7 +55,7 @@ export default function Form(){
     }
     
     return (
-      <div className='flex flex-col gap-4 flex-end h-1/2'>
+      <div className='flex flex-col gap-4 flex-end'>
        {complete ? (
                 <Cadastrado formData={formData}/>
             ) : (
@@ -69,9 +69,12 @@ export default function Form(){
           height={300}
           /> 
         </div>
-            <ProgressBar currentStep={page + 1} totalSteps={totalSteps}/>
+        
+        <div className="flex flex-col p-2">
+        <ProgressBar currentStep={page + 1} totalSteps={totalSteps}/>
          
-         <div>{pageDisplay()}</div>
+         <div className="p-2">{pageDisplay()}</div>
+         </div>
 
        <button className="bg-red-600 rounded-md pt-3 items-center hover:bg-red-400 py-3 px-5"
        onClick={handleButtonClick}

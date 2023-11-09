@@ -16,7 +16,7 @@ const Text = () => {
           height={300}
           />
 
-        <section className='grid grid-cols-1 max-w-md '> 
+        <section className='grid grid-cols-1 max-w-md pr-7'> 
         <div>
           <h1 className='text-2xl mt-10'>Seja bem vindo a iniciativa <span className='text-red-600'>Sangue</span> corinthiano</h1>
           <p className='mb-3 text-sm'>Na família corinthiana, a paixão pelo nosso clube é algo que nos une. Mas existe algo ainda mais poderoso que pode unir nossos corações: a solidariedade. </p>
